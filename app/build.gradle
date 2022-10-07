@@ -65,5 +65,5 @@ dependencies {
     implementation 'com.squareup.okhttp3:logging-interceptor:4.4.1'
 
     //v2 clean support
-    implementation 'com.v2.core_clean:android-core-clean:0.0.3'
+    implementation 'com.v2.core_clean:android-core-clean:0.0.5'
 }

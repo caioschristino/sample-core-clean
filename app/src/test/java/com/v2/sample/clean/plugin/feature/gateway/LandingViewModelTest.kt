@@ -1,6 +1,6 @@
 package com.v2.sample.clean.plugin.feature.gateway
 
-import com.v2.sample.clean.BaseViewModelTest
+import br.com.clean.core.gateway.mvvm.BaseViewModelTest
 import com.v2.sample.clean.DataFactory
 import com.v2.sample.clean.feature.landing.business.LandingRepository
 import com.v2.sample.clean.feature.landing.business.LandingUseCase
