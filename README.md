@@ -77,8 +77,37 @@ No nosso caso, contém também uma estrégia de injeção de dependencia por ```
 
 
 
+## CoreClean Dependencia
+Adicione tokens do CoreClean no arquivo gradle.properties
+``` 
+# Public token to sync v2.jetbrains.space
+urlV2Space=https://maven.pkg.jetbrains.space/v2/p/v-2-software-house/maven
+spaceUsername=4ff92108-eba9-4ae1-a0a4-4c626d37f8e1
+spacePassword=eyJhbGciOiJSUzUxMiJ9.eyJzdWIiOiI0ZmY5MjEwOC1lYmE5LTRhZTEtYTBhNC00YzYyNmQzN2Y4ZTEiLCJhdWQiOiI0ZmY5MjEwOC1lYmE5LTRhZTEtYTBhNC00YzYyNmQzN2Y4ZTEiLCJvcmdEb21haW4iOiJ2MiIsIm5hbWUiOiJ2Mi5zb2Z0d2FyZWhvdXNlIiwiaXNzIjoiaHR0cHM6XC9cL3YyLmpldGJyYWlucy5zcGFjZSIsInBlcm1fdG9rZW4iOiI0YU5WWjMzeW9uMHMiLCJwcmluY2lwYWxfdHlwZSI6IlNFUlZJQ0UiLCJpYXQiOjE2NjUwNzY1NDB9.eqr-lXzAkczNhTcspISkrk1bf4l7aTFKnNToYUcNkDMWTelyavA42lStOW6vSlD0RDjCa1FOUzKlunsPW4-AaczUcZz9o5OhHKdChumy-bDB9WdqemJOAgHKrhzPNXKZzZsO5o0hkxgyCdz8g0oOmwmD5yJWQ7v34AVvWcxS2wI
+```
 
+Adicione maven credentials CoreClean no repositories (ex: settings.gradle)
+```
+repositories {
+      google()
+      mavenCentral()
+      maven {
+          url urlV2Space
+          credentials {
+              username spaceUsername
+              password spacePassword
+          }
+      }
+ }
+```
 
+e então no seu arquivo build.gradle, adicione a dependencia CoreClean
+```
+dependencies {
+    ...
+    implementation 'com.v2.core_clean:android-core-clean:0.0.3'
+}
+```
 
 ## Contato
 v2.softwarehouse@gmail.com
