@@ -1,7 +1,7 @@
 package com.v2.sample.clean
 
-import com.v2.sample.clean.feature.landing.domain.Landing
-import com.v2.sample.clean.feature.landing.domain.Pokemon
+import com.v2.sample.clean.feature.chainusecase.domain.Landing
+import com.v2.sample.clean.feature.chainusecase.domain.Pokemon
 import java.time.LocalDate
 import java.util.*
 import java.util.concurrent.ThreadLocalRandom
