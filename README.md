@@ -1,5 +1,5 @@
 # CoreClean Guideline Codestyle
-CoreClean é um framework para guiar desenvolvedores Android's na construção de ```Fragments```, ```Activitys```, ```ViewModels``` e ```Casos de Uso```. Baseado em arquitetura limpa e construído pela v2.softwarehouse. Com o propósito de colaborar com a comunidade Android.
+CoreClean é um framework para guiar desenvolvedores Android's na construção de ```Fragments```, ```Activitys```, ```ViewModels``` e ```Caso de Uso```. Baseado em arquitetura limpa e construído pela v2.softwarehouse. Com o propósito de colaborar com a comunidade Android.
 
 # O que ele faz?
 - Guia seu desenvolvimento Android.
