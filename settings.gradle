@@ -1,0 +1,23 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url urlV2Space
+            credentials {
+                username spaceUsername
+                password spacePassword
+            }
+        }
+    }
+}
+rootProject.name = "SampleCleanArchitecture"
+include ':app'
