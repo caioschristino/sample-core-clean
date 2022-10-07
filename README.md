@@ -42,28 +42,21 @@ Resposável por organizar as camadas ```Business```,  ```Domain```, ```Gateway``
 
 #### - Subcamada Business
 
-Responsável por conter o(s) caso(s) de uso(s) da feature e uma interface inversão da dependencia. 
-
-No nosso caso, nossa interface será para um repositório.
+Responsável por conter o(s) caso(s) de uso(s) da feature e uma interface inversão da dependencia. No sample, nossa interface será para um repositório.
 
 
 #### - Subcamada Domain
 
-Responsável por conter um ```objeto``` de dominio da feature.
-
-No nosso caso, ```objeto``` representa tanto um Data Transfer Object(DTO) quanto um ModeView.
+Responsável por conter um ```objeto``` de dominio da feature. No nosso caso o objeto representa tanto um Data Transfer Object(DTO) quanto um ModeView.
 
 
 #### - Subcamada Gateway
 
-Responsável por inverter a dependencia com a ViewModel. Deixando apenas os contratos com a view expostos no Controller.
-
-No nosso caso, contém uma estrégia de injeção de dependencia por ```Singleton Pattern```. Através da classe ```LandingGatewayInjector```
+Responsável por inverter a dependencia com a ViewModel. Deixando apenas os contratos com a view expostos no Controller. O sample também contém uma estrégia de injeção de dependencia por ```Singleton Pattern```. Através da classe ```LandingGatewayInjector```
 
 
 #### - Subcamada View
-Responsável por conter View da feature. No nosso caso, um Fragment.
-No nosso caso, contém também uma estrégia de injeção de dependencia por ```Singleton Pattern```. Através da classe ```LandingViewInjector```
+Responsável por conter View da feature. No nosso caso, um Fragment. O sample também contém uma estrégia de injeção de dependencia por ```Singleton Pattern```. Através da classe ```LandingViewInjector```
 
 
 ## Linguagem, bibliotecas e ferramentas utilizadas no Sample
