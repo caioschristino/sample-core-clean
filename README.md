@@ -47,7 +47,10 @@ Responsável por conter o(s) caso(s) de uso(s) da feature e uma interface invers
 
 #### - Subcamada Domain
 
-Responsável por conter um ```objeto``` de dominio da feature. No nosso caso o objeto representa tanto um Data Transfer Object(DTO) quanto um ModeView.
+Responsável por conter um ```objeto``` de dominio da feature. No nosso caso o objeto representa tanto um Data Transfer Object(DTO) quanto um ModeView. O Sample não propõe solução de wrapper para DTO e ModelView e opta por um dominío dividdo entre feature, facilitando o exemplo. 
+
+
+```Para soluções reais, optar por pacote de dominío por feature (ex: ChainPokemon) evitando acoplamento entre pacotes.```
 
 
 #### - Subcamada Gateway
