@@ -3,7 +3,6 @@ package com.v2.sample.clean.feature.usecase.view
 import android.view.View
 import br.com.clean.core.view.ui.BaseFragment
 import com.v2.sample.clean.R
-import com.v2.sample.clean.feature.usecase.domain.Landing
 import com.v2.sample.clean.feature.usecase.gateway.UseCaseController
 import com.v2.sample.clean.feature.usecase.view.UseCaseViewInjector.Companion.self as injector
 
@@ -28,13 +27,7 @@ class UseCaseFragment : BaseFragment<UseCaseController>() {
     }
 
     override fun handleSuccess(value: Any?) {
-        when (value) {
-            is Landing? -> loadLanding(value)
-        }
-    }
-
-    override fun handleError(error: Throwable?) {
-        error?.toString()
+        value.toString()
     }
 
     override fun setupController(): UseCaseController {
@@ -43,9 +36,5 @@ class UseCaseFragment : BaseFragment<UseCaseController>() {
 
     private fun fetch() {
         controller.doFetch(useCaseChannel)
-    }
-
-    private fun loadLanding(landing: Landing?) {
-        landing?.count
     }
 }

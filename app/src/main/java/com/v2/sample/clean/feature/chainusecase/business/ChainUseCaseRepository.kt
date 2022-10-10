@@ -1,7 +1,8 @@
 package com.v2.sample.clean.feature.chainusecase.business
 
-import com.v2.sample.clean.feature.chainusecase.domain.Landing
+import com.v2.sample.clean.domain.Pokemon
 
 interface ChainUseCaseRepository {
-    fun doFetch(): Landing?
+    fun getBulbasaur(): Pokemon?
+    fun getVenusaur(): Pokemon?
 }

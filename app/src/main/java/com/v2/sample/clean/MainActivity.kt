@@ -2,6 +2,7 @@ package com.v2.sample.clean
 
 import android.os.Bundle
 import br.com.clean.core.view.ui.BaseActivity
+import com.v2.sample.clean.feature.landing.view.LandingFragment
 
 class MainActivity : BaseActivity() {
 

@@ -1,7 +1,7 @@
 package com.v2.sample.clean.feature.handleerror.view
 
 import br.com.clean.core.gateway.mvvm.ControllerFactory
-import com.v2.sample.clean.feature.landing.gateway.ErrorUseCaseController
+import com.v2.sample.clean.feature.handleerror.gateway.ErrorUseCaseController
 
 interface ErrorUseCaseViewInjector {
     companion object {

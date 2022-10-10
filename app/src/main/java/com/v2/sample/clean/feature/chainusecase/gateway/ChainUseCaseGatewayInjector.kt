@@ -1,13 +1,13 @@
 package com.v2.sample.clean.feature.chainusecase.gateway
 
-import com.v2.sample.clean.feature.chainusecase.business.FirstUseCase
-import com.v2.sample.clean.feature.chainusecase.business.SecondUseCase
+import com.v2.sample.clean.feature.chainusecase.business.GETBulbasaurUseCase
+import com.v2.sample.clean.feature.chainusecase.business.GETVenusaurUseCase
 
 interface ChainUseCaseGatewayInjector {
     companion object {
         lateinit var self: ChainUseCaseGatewayInjector
     }
 
-    val doFirst: FirstUseCase
-    val doSecond: SecondUseCase
+    val getBulbasaur: GETBulbasaurUseCase
+    val getVenusaur: GETVenusaurUseCase
 }

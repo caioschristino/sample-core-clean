@@ -1,4 +1,4 @@
-package com.v2.sample.clean.feature.landing.gateway
+package com.v2.sample.clean.feature.handleerror.gateway
 
 import br.com.clean.core.gateway.mvvm.Controller
 

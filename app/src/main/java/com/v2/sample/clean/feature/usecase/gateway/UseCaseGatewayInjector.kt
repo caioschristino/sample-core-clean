@@ -1,12 +1,11 @@
 package com.v2.sample.clean.feature.usecase.gateway
 
-import com.v2.sample.clean.feature.usecase.business.UnitUseCase
-
+import com.v2.sample.clean.feature.usecase.business.GETBulbasaurUseCase
 
 interface UseCaseGatewayInjector {
     companion object {
         lateinit var self: UseCaseGatewayInjector
     }
 
-    val doUseCase: UnitUseCase
+    val getBulbasaur: GETBulbasaurUseCase
 }

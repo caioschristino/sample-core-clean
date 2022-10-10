@@ -1,11 +1,11 @@
-package com.v2.sample.clean.feature.landing.gateway
+package com.v2.sample.clean.feature.handleerror.gateway
 
-import com.v2.sample.clean.feature.chainusecase.gateway.ChainUseCaseGatewayInjector
+import com.v2.sample.clean.feature.handleerror.business.ErrorUseCase
 
 interface ErrorUseCaseGatewayInjector {
     companion object {
-        lateinit var self: ChainUseCaseGatewayInjector
+        lateinit var self: ErrorUseCaseGatewayInjector
     }
 
-    val doFetch: ChainUseCase
+    val doError: ErrorUseCase
 }

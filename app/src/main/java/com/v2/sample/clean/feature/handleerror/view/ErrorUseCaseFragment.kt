@@ -3,8 +3,7 @@ package com.v2.sample.clean.feature.handleerror.view
 import android.view.View
 import br.com.clean.core.view.ui.BaseFragment
 import com.v2.sample.clean.R
-import com.v2.sample.clean.feature.handleerror.domain.Landing
-import com.v2.sample.clean.feature.landing.gateway.ErrorUseCaseController
+import com.v2.sample.clean.feature.handleerror.gateway.ErrorUseCaseController
 import com.v2.sample.clean.feature.handleerror.view.ErrorUseCaseViewInjector.Companion.self as injector
 
 class ErrorUseCaseFragment : BaseFragment<ErrorUseCaseController>() {
@@ -27,12 +26,6 @@ class ErrorUseCaseFragment : BaseFragment<ErrorUseCaseController>() {
         fetch()
     }
 
-    override fun handleSuccess(value: Any?) {
-        when (value) {
-            is Landing? -> loadLanding(value)
-        }
-    }
-
     override fun handleError(error: Throwable?) {
         error?.toString()
     }
@@ -43,9 +36,5 @@ class ErrorUseCaseFragment : BaseFragment<ErrorUseCaseController>() {
 
     private fun fetch() {
         controller.doFetch(errorUseCaseChannel)
-    }
-
-    private fun loadLanding(landing: Landing?) {
-        landing?.count
     }
 }
