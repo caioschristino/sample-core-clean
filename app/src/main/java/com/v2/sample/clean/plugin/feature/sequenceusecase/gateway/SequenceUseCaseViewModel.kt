@@ -11,7 +11,7 @@ import com.v2.sample.clean.feature.sequenceusecase.gateway.SequenceUseCaseGatewa
 class SequenceUseCaseViewModel : BaseViewModel(), SequenceUseCaseController {
     private val getBulbasaur by lazy { injectBulbasaurUseCase() }
     private val getVenusaur by lazy { injectVenusaurUseCase() }
-    private val getIvysaur by lazy { injectVenusaurUseCase() }
+    private val getIvysaur by lazy { injectIvysaurUseCase() }
 
     private fun injectBulbasaurUseCase(): GETBulbasaurUseCase {
         return injector.getBulbasaur
