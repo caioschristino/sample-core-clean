@@ -98,7 +98,7 @@ e então no seu arquivo build.gradle, adicione a dependencia CoreClean
 ```
 dependencies {
     ...
-    implementation 'com.v2.core_clean:android-core-clean:0.0.3'
+    implementation 'com.v2.core_clean:android-core-clean:0.0.5'
 }
 ```
 
