@@ -1,4 +1,4 @@
-package com.v2.sample.clean.plugin.api
+package com.v2.sample.clean.plugin
 
 import com.v2.sample.clean.plugin.api.BaseRepository
 import okhttp3.mockwebserver.MockWebServer

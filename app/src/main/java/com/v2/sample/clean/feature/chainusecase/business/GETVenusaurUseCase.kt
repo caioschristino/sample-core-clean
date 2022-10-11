@@ -10,7 +10,7 @@ class GETVenusaurUseCase(
 ) : UseCase<ChainPokemon, ChainPokemon>() {
 
     override fun execute(param: ChainPokemon?): Output<ChainPokemon> {
-        param?.results?.add(repo.getVenusaur())
+        param?.results?.add(repo.getIvysaur())
         return ValueOutput(param)
     }
 }

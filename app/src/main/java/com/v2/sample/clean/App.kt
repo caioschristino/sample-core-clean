@@ -30,7 +30,7 @@ import com.v2.sample.clean.feature.usecase.gateway.UseCaseController
 import com.v2.sample.clean.feature.usecase.gateway.UseCaseGatewayInjector
 import com.v2.sample.clean.feature.usecase.view.UseCaseFragment
 import com.v2.sample.clean.feature.usecase.view.UseCaseViewInjector
-import com.v2.sample.clean.plugin.feature.chainusecase.ChainUseCaseLandingRepositoryImpl
+import com.v2.sample.clean.plugin.feature.chainusecase.ChainUseCaseRepositoryImpl
 import com.v2.sample.clean.plugin.feature.chainusecase.gateway.ChainUseCaseControllerFactoryImpl
 import com.v2.sample.clean.plugin.feature.handleerror.ErrorUseCaseRepositoryImpl
 import com.v2.sample.clean.plugin.feature.handleerror.gateway.ErrorUseCaseControllerFactoryImpl
@@ -67,7 +67,7 @@ class App : Application() {
     }
 
     private fun injectaCacheRepository(): ChainUseCaseRepository {
-        return ChainUseCaseLandingRepositoryImpl(baseApiUrl)
+        return ChainUseCaseRepositoryImpl(baseApiUrl)
     }
 
     private fun doSequenceUseCaseGatewayInjector() {

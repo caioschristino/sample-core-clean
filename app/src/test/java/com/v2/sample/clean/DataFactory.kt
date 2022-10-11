@@ -1,10 +1,12 @@
 package com.v2.sample.clean
 
-import com.v2.sample.clean.feature.chainusecase.domain.Landing
-import com.v2.sample.clean.feature.chainusecase.domain.Pokemon
 import java.time.LocalDate
-import java.util.*
+import java.util.UUID
 import java.util.concurrent.ThreadLocalRandom
+import com.v2.sample.clean.feature.usecase.domain.Pokemon as UseCaseDataPokemon
+import com.v2.sample.clean.feature.sequenceusecase.domain.Pokemon as SequenceUseCaseDataPokemon
+import com.v2.sample.clean.feature.chainusecase.domain.Pokemon as ChainUseCaseDataPokemon
+import com.v2.sample.clean.feature.handleerror.domain.Pokemon as ErrorUseCaseDataPokemon
 
 class DataFactory {
     companion object Factory {
@@ -21,12 +23,24 @@ class DataFactory {
 
         private fun randomBoolean() = Math.random() < 0.5
 
-        fun mockLanding() = Landing(randomInt(), randomUuid(), mockPokemonList())
+        fun mockUseCaseDataPokemon() = UseCaseDataPokemon(randomUuid())
+        fun mockErrorUseCaseDataPokemon() = ErrorUseCaseDataPokemon(randomUuid())
+        fun mockBulbasaurSequenceUseCaseData() = SequenceUseCaseDataPokemon("Bulbasaur")
+        fun mockIvysaurSequenceUseCaseData() = SequenceUseCaseDataPokemon("Ivysaur")
+        fun mockVenusaurSequenceUseCaseData() = SequenceUseCaseDataPokemon("Venusaur")
 
-        fun mockEmptyLanding() = Landing(randomInt(), randomUuid(), mutableListOf())
+        fun mockBulbasaurChainUseCaseData() = ChainUseCaseDataPokemon("Bulbasaur")
+        fun mockIvysaurChainUseCaseData() = ChainUseCaseDataPokemon("Ivysaur")
 
-        fun mockPokemon() = Pokemon(randomUuid(), randomUuid(), randomBoolean())
 
-        fun mockPokemonList() = (0..10).map { mockPokemon() }.toMutableList()
+
+
+//        fun mockLanding() = Landing(randomInt(), randomUuid(), mockPokemonList())
+//
+//        fun mockEmptyLanding() = Landing(randomInt(), randomUuid(), mutableListOf())
+//
+//        fun mockPokemon() = Pokemon(randomUuid(), randomUuid(), randomBoolean())
+//
+//        fun mockPokemonList() = (0..10).map { mockPokemon() }.toMutableList()
     }
 }

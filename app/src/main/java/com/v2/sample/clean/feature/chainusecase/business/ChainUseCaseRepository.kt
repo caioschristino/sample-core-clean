@@ -1,8 +1,9 @@
 package com.v2.sample.clean.feature.chainusecase.business
 
-import com.v2.sample.clean.domain.Pokemon
+import com.v2.sample.clean.feature.chainusecase.domain.Pokemon
+
 
 interface ChainUseCaseRepository {
     fun getBulbasaur(): Pokemon?
-    fun getVenusaur(): Pokemon?
+    fun getIvysaur(): Pokemon?
 }
